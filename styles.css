@@ -12,11 +12,20 @@
 /* Base Styles */
 body {
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0a0a0a;
     color: #ffffff;
     overflow-x: hidden;
     font-weight: 400;
     letter-spacing: -0.01em;
+    /* Grid background with darkened edges */
+    background-image: 
+        radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.4) 40%, rgba(10, 10, 10, 0.8) 70%, rgba(10, 10, 10, 0.95) 100%),
+        linear-gradient(to bottom, rgba(10, 10, 10, 0.7) 0%, transparent 30%, transparent 70%, rgba(10, 10, 10, 0.7) 100%),
+        url('images/GridBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 html {
@@ -31,7 +40,7 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+    background: rgba(10, 10, 10, 0.3); /* Subtle overlay for better text readability */
     padding: 80px 20px;
 }
 
@@ -49,12 +58,13 @@ html {
 }
 
 .hero-image-placeholder {
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.9);
     height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 
 .game-title {
@@ -90,6 +100,19 @@ html {
 /* Main Content */
 .content {
     padding: 120px 0;
+    position: relative;
+}
+
+/* Add subtle background overlay for better readability */
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.5);
+    z-index: -1;
 }
 
 /* Container */
@@ -97,6 +120,8 @@ html {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 40px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Intro Section */
@@ -155,16 +180,17 @@ html {
 }
 
 .feature-image {
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.9);
     border-radius: 12px;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 .placeholder {
-    color: #444;
+    color: #666;
     font-size: 0.9rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -173,7 +199,8 @@ html {
 
 /* Team Section */
 .team-section {
-    background: #050505;
+    background: rgba(5, 5, 5, 0.85); /* Semi-transparent dark overlay */
+    backdrop-filter: blur(5px); /* Subtle blur effect for depth */
     padding: 120px 0;
     text-align: center;
 }
@@ -231,6 +258,7 @@ html {
 .connect {
     padding: 100px 0;
     text-align: center;
+    background: rgba(10, 10, 10, 0.3); /* Subtle overlay */
 }
 
 .connect h2 {
@@ -263,11 +291,12 @@ html {
 footer {
     padding: 60px 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.7); /* Darker overlay for footer */
 }
 
 footer p {
-    color: #444;
+    color: #666;
     font-size: 0.9rem;
     letter-spacing: 0.02em;
     font-family: 'Space Mono', monospace;
