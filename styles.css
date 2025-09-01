@@ -164,14 +164,14 @@ html {
 
 .feature-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;  /* Give MORE space to images */
-    gap: 40px;  /* Reduced gap from 80px */
+    grid-template-columns: 1fr 1.5fr;  /* Text gets 1fr, Image gets 1.5fr */
+    gap: 40px;
     align-items: center;
 }
 
 .feature-section.reverse .feature-content {
     direction: rtl;
-    grid-template-columns: 1.5fr 1fr;  /* Reverse the proportions too */
+    grid-template-columns: 1fr 1.5fr;  /* SAME proportions - Image still gets 1.5fr */
 }
 
 .feature-section.reverse .feature-text {
@@ -202,6 +202,7 @@ html {
     overflow: hidden;
     padding: 0;
 }
+
 
 .feature-image img {
     width: 100%;
