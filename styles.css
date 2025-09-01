@@ -47,14 +47,14 @@ html {
 
 .hero-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;  /* INCREASED from 800px */
     margin-bottom: 40px;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
-    max-height: 450px;
+    max-height: 600px;  /* INCREASED from 450px */
     object-fit: contain;
     display: block;
     border-radius: 12px;
@@ -127,7 +127,7 @@ html {
 
 /* Container */
 .container {
-    max-width: 1000px;
+    max-width: 1400px;  /* INCREASED from 1000px for bigger content */
     margin: 0 auto;
     padding: 0 40px;
     position: relative;
@@ -137,7 +137,7 @@ html {
 /* Intro Section */
 .intro-section {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;  /* INCREASED from 800px */
     margin: 0 auto 120px;
     /* REMOVED ANIMATION */
 }
@@ -158,19 +158,20 @@ html {
 
 /* Feature Sections */
 .feature-section {
-    margin-bottom: 140px;
+    margin-bottom: 100px;  /* Reduced from 140px */
     /* REMOVED FADE IN ANIMATION */
 }
 
 .feature-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1.5fr;  /* Give MORE space to images */
+    gap: 40px;  /* Reduced gap from 80px */
     align-items: center;
 }
 
 .feature-section.reverse .feature-content {
     direction: rtl;
+    grid-template-columns: 1.5fr 1fr;  /* Reverse the proportions too */
 }
 
 .feature-section.reverse .feature-text {
@@ -193,13 +194,13 @@ html {
 
 .feature-image {
     border-radius: 12px;
-    min-height: 500px;  /* INCREASED from 300px */
-    max-height: 700px;  /* INCREASED from 500px */
+    min-height: 600px;  /* INCREASED even more */
+    height: 600px;  /* Set fixed height */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 0;  /* REMOVED padding */
+    padding: 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -212,8 +213,7 @@ html {
 .feature-image img {
     width: 100%;
     height: 100%;
-    max-height: 700px;  /* INCREASED from 460px */
-    object-fit: cover;  /* Changed to cover for full image display */
+    object-fit: cover;  /* Fill the entire container */
     display: block;
 }
 
@@ -395,8 +395,8 @@ footer p {
     }
 
     .feature-image {
-        min-height: 350px;  /* INCREASED from 250px */
-        max-height: 500px;  /* INCREASED from 400px */
+        min-height: 400px;  /* INCREASED */
+        height: 400px;  /* Set fixed height for mobile */
     }
 
     .container {
