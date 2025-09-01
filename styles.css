@@ -1,6 +1,5 @@
-/* Space Grotesk: A retro-futuristic font that matches the VHS-era fantasy vibe
-   Space Mono: Used for technical elements like badges and footers */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono&display=swap');
+/* Minimal, focused fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* Reset */
 * {
@@ -11,11 +10,13 @@
 
 /* Base Styles */
 body {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #ffffff;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #b0b0b0;
     overflow-x: hidden;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
     /* Grid background with darkened edges */
     background-image: 
         radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.4) 40%, rgba(10, 10, 10, 0.8) 70%, rgba(10, 10, 10, 0.95) 100%),
@@ -25,385 +26,345 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Hero Section */
+/* Hero Section - COMPACT */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: rgba(10, 10, 10, 0.3); /* Subtle overlay for better text readability */
-    padding: 80px 20px;
-    /* REMOVED ANIMATION */
+    padding: 60px 20px 40px;
+    background: rgba(10, 10, 10, 0.3);
 }
 
 .hero-image {
-    width: 100%;
-    max-width: 1000px;  /* INCREASED from 800px */
-    margin-bottom: 40px;
+    max-width: 720px;
+    margin-bottom: 15px;
 }
 
 .hero-image img {
-    width: 100%;
     height: auto;
-    max-height: 600px;  /* INCREASED from 450px */
-    object-fit: contain;
+    max-height: 400px;
+    object-fit: cover;
     display: block;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-image-placeholder {
-    /* Removed gray background */
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
 }
 
 .game-title {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: -0.04em;
-    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.25rem;
     text-align: center;
-    line-height: 1.1;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+    line-height: 1;
+    color: #ffffff;
 }
 
 .game-tagline {
-    font-size: 1.4rem;
-    color: #ffffff;
+    font-size: 1rem;
+    color: #808080;
     font-weight: 400;
-    letter-spacing: -0.01em;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .status-badge {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: #ffffff;
-    letter-spacing: 0.08em;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 14px;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    color: #00ff95;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: 'Space Mono', monospace;
-    font-weight: 400;
-    transition: all 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-.status-badge:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Main Content */
+/* Main Content - MUCH MORE COMPACT */
 .content {
-    padding: 120px 0;
-    position: relative;
-}
-
-/* Add subtle background overlay for better readability */
-.content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    padding: 20px 0;
     background: rgba(10, 10, 10, 0.5);
-    z-index: -1;
 }
 
-/* Container */
+/* Container - NARROWER */
 .container {
-    max-width: 1400px;  /* INCREASED from 1000px for bigger content */
+    max-width: 500px;
     margin: 0 auto;
-    padding: 0 40px;
-    position: relative;
-    z-index: 1;
+    padding: 0 20px;
 }
 
-/* Intro Section */
+/* Intro Section - TIGHTER */
 .intro-section {
     text-align: center;
-    max-width: 900px;  /* INCREASED from 800px */
-    margin: 0 auto 120px;
-    /* REMOVED ANIMATION */
+    margin-bottom: 40px;
 }
 
 .intro-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 2rem;
-    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    letter-spacing: -0.02em;
 }
 
 .intro-text {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #ccc;
-    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #808080;
+    text-align: left;
 }
 
-/* Feature Sections */
+/* Feature Sections - COMPACT CARDS */
 .feature-section {
-    margin-bottom: 100px;  /* Reduced from 140px */
-    /* REMOVED FADE IN ANIMATION */
+    margin-bottom: 30px;
 }
 
 .feature-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;  /* Text gets 1fr, Image gets 1.5fr */
-    gap: 40px;
-    align-items: center;
-}
-
-.feature-section.reverse .feature-content {
-    direction: rtl;
-    grid-template-columns: 1fr 1.5fr;  /* SAME proportions - Image still gets 1.5fr */
-}
-
-.feature-section.reverse .feature-text {
-    direction: ltr;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
 .feature-text h3 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     color: #ffffff;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+/* Line under feature titles - FULL WIDTH */
+.feature-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .feature-text p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #808080;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .feature-image {
-    border-radius: 12px;
-    min-height: 600px;  /* INCREASED even more */
-    height: 600px;  /* Set fixed height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     overflow: hidden;
-    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 .feature-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Fill the entire container */
+    object-fit: cover;
     display: block;
 }
 
 .placeholder {
-    color: #999;
-    font-size: 0.9rem;
+    color: #444;
+    font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: 'Space Mono', monospace;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-/* Team Section */
+/* Team Section - MINIMAL */
 .team-section {
-    background: rgba(5, 5, 5, 0.85); /* Semi-transparent dark overlay */
-    backdrop-filter: blur(5px); /* Subtle blur effect for depth */
-    padding: 120px 0;
-    text-align: center;
+    background: rgba(10, 10, 10, 0.3);
+    padding: 30px 0;
 }
 
 .team-content {
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .team-content h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    letter-spacing: -0.03em;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
 }
 
-.team-intro {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 4rem;
-    font-weight: 400;
+/* Line under About Us heading */
+.team-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .team-members {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.member {
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+
+.member:last-child {
+    padding-bottom: 0;
 }
 
 .member h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #ffffff;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
+    margin-bottom: 0.15rem;
+    letter-spacing: -0.01em;
 }
 
-.member p {
-    color: #bbb;
-    font-size: 1rem;
-    font-family: 'Space Mono', monospace;
+.member .role {
+    color: #8d8d8d;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+.member .past-work {
+    color: #8d8d8d;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 .team-story {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ccc;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #8d8d8d;
+    text-align: center;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Connect Section */
+/* Connect Section - SIMPLE */
 .connect {
-    padding: 100px 0;
+    padding: 25px 0;
     text-align: center;
-    background: rgba(10, 10, 10, 0.3); /* Subtle overlay */
+    background: rgba(10, 10, 10, 0.3);
 }
 
 .connect h2 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 3rem;
-    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    color: #fff;
 }
 
 .connect-links {
     display: flex;
-    gap: 40px;
+    gap: 15px;
     justify-content: center;
 }
 
 .connect-link {
-    color: #999;
+    color: #666;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: -0.01em;
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    border-radius: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    transition: all 0.2s ease;
 }
 
 .connect-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-/* Footer */
+/* Footer - MINIMAL */
 footer {
-    padding: 60px 0;
+    padding: 15px 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(10, 10, 10, 0.7); /* Darker overlay for footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 10, 0.7);
 }
 
 footer p {
-    color: #999;
-    font-size: 0.9rem;
-    letter-spacing: 0.02em;
-    font-family: 'Space Mono', monospace;
+    color: #444;
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .studio-credit {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .studio-credit a {
-    color: #ffffff;
+    color: #666;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .studio-credit a:hover {
-    opacity: 0.7;
+    color: #999;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .game-title {
-        font-size: 3rem;
-    }
-
-    .game-tagline {
-        font-size: 1.2rem;
-    }
-
-    .hero {
-        min-height: 100vh;
-        padding: 40px 20px;
-    }
-
-    .hero-image {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .hero-image-placeholder {
-        height: auto;  /* Changed from 180px */
-    }
-
-    .intro-section h2 {
         font-size: 2rem;
     }
 
-    .intro-text {
-        font-size: 1.1rem;
+    .game-tagline {
+        font-size: 0.9rem;
     }
 
-    .feature-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .feature-section.reverse .feature-content {
-        direction: ltr;
-    }
-
-    .feature-text h3 {
-        font-size: 1.6rem;
+    .hero {
+        padding: 40px 20px 30px;
+        min-height: auto;
     }
 
     .feature-image {
-        min-height: 400px;  /* INCREASED */
-        height: 400px;  /* Set fixed height for mobile */
-    }
-
-    .container {
-        padding: 0 20px;
+        height: 250px;
     }
 
     .team-members {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 20px;
     }
 
     .connect-links {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .connect-link {
+        width: 150px;
     }
 }
