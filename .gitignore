@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+.config/
+Gemfile.lock
+
+# Node (if you add any build tools later)
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Image sources (keep only optimized versions)
+*.psd
+*.ai
+*.sketch

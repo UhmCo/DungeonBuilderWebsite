@@ -1,0 +1,38 @@
+# Jekyll Configuration for Project Dungeon Builder
+
+# Site settings
+title: Project Dungeon Builder
+description: Build the dungeon as you explore it. A dungeon crawler where room placement changes everything.
+author: Uhm... Games
+email: hello@uhmgames.com
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Social links (update these)
+twitter_username: uhmgames
+discord_invite: your-discord-code
+itch_username: uhm
+
+# Custom variables for easy updates
+game_status: Early Development
+team_location: Boston, MA
+
+# Assets
+assets:
+  hero_image: /images/green-corridor.png
+  room_system_image: /images/room-system.png
+  corruption_clock_image: /images/corruption-clock.png
+  combat_image: /images/combat-crafting.png
+
+# SEO and Meta
+tagline: "It's Tetris meets Hades with a ticking corruption clock"
+keywords: "indie game, dungeon crawler, roguelike, emergent gameplay, procedural generation"
+
+# Exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
