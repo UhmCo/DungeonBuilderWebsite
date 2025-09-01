@@ -349,10 +349,6 @@ footer p {
         min-height: auto;
     }
 
-    .feature-image {
-        height: 250px;
-    }
-
     .team-members {
         grid-template-columns: 1fr;
         gap: 20px;
